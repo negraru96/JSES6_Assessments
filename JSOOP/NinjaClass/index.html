@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    function Ninja(name) {
+      var ninja = {};
+      this.name = name;
+    };
+    Ninja.prototype.sayName = function() {
+      console.log(ninja.name);
+    };
+    var mikeninja = new Ninja('mike');
+    console.log(mikeninja);
+    mikeninja.sayName();
+
+    //
+    function Ninja(name) {
+      var ninja = {};
+
+      ninja.name = name;
+      ninja.health = 100;
+      ninja.speed = 3;
+      ninja.strength = 3;
+
+      ninja.sayName = () => {
+        console.log(ninja.name);
+      }
+
+      ninja.showStats = () => {
+        console.log(`Name: ${ninja.name}, Health: ${ninja.health}, Speed: ${ninja.speed}, Strength: ${ninja.strength}`);
+      }
+
+      ninja.drinkSake = () => {
+        ninja.health += 10;
+      }
+      return ninja;
+    }
+
+    var ninja1 = new Ninja("Mike");
+    ninja1.showStats();
+    ninja1.drinkSake();
+    </script>
+  </body>
+</html>
