@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    function Ninja(name) {
+      const ninja = {};
+
+      ninja.name = name;
+      ninja.health = 100;
+      ninja.speed = 3;
+      ninja.strength = 3;
+
+      ninja.sayName = () => {
+        console.log(ninja.name);
+      }
+
+      ninja.showStats = () => {
+        console.log(`Name: ${ninja.name}, Health: ${ninja.health}, Speed: ${ninja.speed}, Strength: ${ninja.strength}`);
+      }
+
+      ninja.drinkSake = () => {
+        ninja.health += 10;
+      }
+      return ninja;
+    }
+
+    const ninja1 = new Ninja("Mike");
+    ninja1.showStats();
+    ninja1.drinkSake();
+    //
+
+    class Ninja{
+      constructor(name) {
+
+        this.name = name;
+        this.health = 100;
+        this.speed = 3;
+        this.strength = 3;
+
+        sayName() {
+          console.log(this.name);
+        }
+
+        showStats() {
+          console.log(`Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`);
+        }
+
+        drinkSake() {
+          this.health += 10;
+        }
+      }
+
+      class Sensei extends Ninja {
+        constructor(name) {
+          super(ninja);
+
+          sensei.health = 200;
+          sensei.speed = 10;
+          sensei.strength = 10;
+          sensei.wisdom = 10;
+
+          sensei.speakWisdom = () => {
+            ninja.drinkSake();
+            console.log(`"One does not reach enlightenment with power alone, but power and dedication together yields a reward unlike any other."`);
+          }
+
+      const sensei1 = new Sensei;
+      sensei1.speakWisdom();
+      sensei1.showStats();
+
+      const ninja1 = new Ninja("Mike");
+      ninja1.showStats();
+      ninja1.drinkSake();
+      }
+    }
+
+    </script>
+  </body>
+</html>
